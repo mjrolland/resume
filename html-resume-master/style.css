@@ -40,7 +40,7 @@ body{
   hyphens: auto;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
   margin: 0;
   color: #000;
 }
@@ -227,6 +227,22 @@ li{
   margin-bottom: 0.25in;
 }
 
+/* MR: create a decorator2 class without the circle, for the publication list*/
+
+.decorator2{
+  flex: 0 0 0;
+  position: relative;
+  width: 2pt;
+  min-height: 100%;
+  border-left: var(--decorator-border);
+}
+
+
+.blocks:last-child .decorator{ /* slightly shortens it */
+  margin-bottom: 0.25in;
+}
+
+
 /***** fine-tunes on the details block where the real juice is *****/
 
 .details{
@@ -241,6 +257,10 @@ li{
 
 .details h3{
   font-size: 9pt;
+}
+
+.details h4{
+  font-size: 8pt;
 }
 
 .main-block:not(.concise) .details div{
@@ -275,11 +295,11 @@ li{
   position: relative;
   right: 3pt;
   top: 0.25pt;
-  font-family: FontAwesome;
-  font-weight: normal;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-style: normal;
   text-decoration: inherit;
-  content: "\f041";
+  content: "\f3c5";
 }
 
 /***** fine-tunes on the lists... *****/
