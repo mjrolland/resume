@@ -229,7 +229,8 @@ li{
 
 /* MR: create a decorator2 class without the circle, for the publication list*/
 
-.decorator2{
+/* Pour la ligne verticale des publications (sans le rond) */
+.decorator2 {
   flex: 0 0 0;
   position: relative;
   width: 2pt;
@@ -237,6 +238,12 @@ li{
   border-left: var(--decorator-border);
 }
 
+/* On ajuste l'espacement pour que les titres de publis ne soient pas trop collés */
+.main-block.concise .details h3 {
+  font-weight: 400;
+  font-size: 8.5pt;
+  margin-bottom: 2pt;
+}
 
 .blocks:last-child .decorator{ /* slightly shortens it */
   margin-bottom: 0.25in;
@@ -386,4 +393,38 @@ li{
   font-family: "Source Code Pro";
   font-weight: 400;
   font-style: normal;
+}
+
+/* --- AJOUTS POUR LA MISE À JOUR --- */
+
+/* Positionnement de la photo en haut à droite du header */
+.profile-photo {
+  float: right;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-top: -5px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+/* On s'assure que le titre ne chevauche pas la photo */
+#title {
+  padding-right: 80px;
+}
+
+/* Ajustement pour que les blocs d'expérience respirent un peu mieux */
+.details ul {
+  margin-top: 4pt !important;
+  margin-bottom: 4pt !important;
+}
+
+/* On réduit légèrement l'espace entre les blocs de la sidebar pour tout faire tenir */
+.side-block {
+  margin-top: 0.35in !important;
+}
+
+/* On s'assure que les puces du texte principal sont bien visibles */
+#main li {
+  margin-bottom: 2pt;
 }
